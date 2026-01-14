@@ -15,7 +15,11 @@
 
   This example code is in the public domain.
 */
+// Using volatile keyword for variables modified inside an Interrupt Service Routine (ISR)
+volatile int sensorValue = 0; 
 
+// Implementing a non-blocking delay using millis() to maintain system responsiveness
+// instead of using the blocking delay() function.
 #include <Arduino_LSM9DS1.h>
 
 const float accelerationThreshold = 2.5; // threshold of significant in G's
